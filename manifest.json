@@ -21,7 +21,7 @@
     "type": "theme",
     "target": "site",
     "theme_color": "#5840d8",
-    "version": "1.0.1-dev",
+    "version": "1.0.1",
     "description": "atelier::messages.description",
     "requires": {
         "cms": ">=0.0.1",
