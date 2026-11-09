@@ -1,0 +1,680 @@
+@use "fonts";
+
+.theme-atelier {
+    --page: #f3f3ef;
+    --surface: #fff;
+    --ink: #201b35;
+    --muted: #696678;
+    --line: #dedde4;
+    --accent: #5840d8;
+    --accent-ink: #fff;
+    --soft: #ebe8fa;
+    --body: "Roboto", sans-serif;
+    --bs-primary: var(--accent);
+    --bs-primary-rgb: 88, 64, 216;
+    --bs-primary-bg-subtle: var(--soft);
+    --bs-primary-border-subtle: #c3baee;
+    --bs-primary-text-emphasis: #3e2aa4;
+    --bs-body-bg: var(--page);
+    --bs-body-bg-rgb: 243, 243, 239;
+    --bs-body-color: var(--ink);
+    --bs-body-color-rgb: 32, 27, 53;
+    --bs-secondary-color: var(--muted);
+    --bs-secondary-bg: var(--soft);
+    --bs-emphasis-color: var(--ink);
+    --bs-emphasis-color-rgb: 32, 27, 53;
+    --bs-tertiary-bg: var(--soft);
+    --bs-border-color: var(--line);
+    --bs-border-radius: 0.25rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.25rem;
+    --bs-link-color: var(--accent);
+    --bs-link-color-rgb: var(--bs-primary-rgb);
+    --bs-link-hover-color: #3e2aa4;
+    --bs-link-hover-color-rgb: 62, 42, 164;
+    background: var(--page);
+    color: var(--ink);
+    font-family: var(--body);
+    -webkit-font-smoothing: antialiased;
+
+    h1,
+    h2,
+    h3 {
+        font-weight: 700;
+        letter-spacing: -0.035em;
+    }
+
+    a {
+        text-underline-offset: 0.2em;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+    }
+
+    .container {
+        max-width: 1360px;
+        padding-inline: 2rem;
+    }
+
+    .site-header {
+        border-bottom: 1px solid var(--line);
+        background: var(--page);
+    }
+
+    .navbar-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--ink);
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+    }
+
+    .navbar .nav-link {
+        color: var(--muted);
+        font-size: 0.8125rem;
+        font-weight: 500;
+        padding: 0.5rem;
+
+        &.active,
+        &:hover {
+            color: var(--accent);
+        }
+    }
+
+    .site-content {
+        padding-top: 2rem !important;
+        padding-bottom: 4rem !important;
+    }
+
+    .btn {
+        --bs-btn-border-radius: 0.25rem;
+        --bs-btn-padding-x: 1.5rem;
+        --bs-btn-padding-y: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    .btn-sm {
+        --bs-btn-padding-x: 1rem;
+        --bs-btn-padding-y: 0.5rem;
+        font-size: 0.8125rem;
+    }
+
+    .btn-primary {
+        --bs-btn-bg: var(--accent);
+        --bs-btn-border-color: var(--accent);
+        --bs-btn-color: var(--accent-ink);
+        --bs-btn-hover-bg: #3e2aa4;
+        --bs-btn-hover-border-color: #3e2aa4;
+        --bs-btn-active-bg: #3e2aa4;
+        --bs-btn-active-border-color: #3e2aa4;
+        --bs-btn-disabled-bg: var(--accent);
+        --bs-btn-disabled-border-color: var(--accent);
+        --bs-btn-focus-shadow-rgb: 88, 64, 216;
+    }
+
+    .btn-outline-primary {
+        --bs-btn-focus-shadow-rgb: 88, 64, 216;
+        --bs-btn-color: var(--accent);
+        --bs-btn-border-color: var(--accent);
+        --bs-btn-hover-bg: var(--accent);
+        --bs-btn-hover-color: var(--accent-ink);
+        --bs-btn-hover-border-color: var(--accent);
+        --bs-btn-active-bg: var(--accent);
+        --bs-btn-active-color: var(--accent-ink);
+        --bs-btn-active-border-color: var(--accent);
+        --bs-btn-disabled-color: var(--accent);
+        --bs-btn-disabled-border-color: var(--accent);
+    }
+
+    .card {
+        --bs-card-bg: var(--surface);
+        --bs-card-color: var(--ink);
+        --bs-card-border-color: var(--line);
+        --bs-card-border-radius: 0.25rem;
+        --bs-card-inner-border-radius: 0.25rem;
+    }
+
+    .table {
+        --bs-table-bg: var(--surface);
+        --bs-table-color: var(--ink);
+        --bs-table-border-color: var(--line);
+        --bs-table-hover-bg: var(--soft);
+        --bs-table-hover-color: var(--ink);
+    }
+
+    .page-link {
+        --bs-pagination-bg: var(--surface);
+        --bs-pagination-color: var(--accent);
+        --bs-pagination-border-color: var(--line);
+        --bs-pagination-hover-bg: var(--soft);
+        --bs-pagination-hover-color: var(--accent);
+        --bs-pagination-hover-border-color: var(--accent);
+        --bs-pagination-active-bg: var(--accent);
+        --bs-pagination-active-color: var(--accent-ink);
+        --bs-pagination-active-border-color: var(--accent);
+        --bs-pagination-disabled-bg: var(--page);
+        --bs-pagination-disabled-color: var(--muted);
+        --bs-pagination-disabled-border-color: var(--line);
+    }
+
+    .nav-pills {
+        --bs-nav-pills-link-active-bg: var(--accent);
+        --bs-nav-pills-link-active-color: var(--accent-ink);
+    }
+
+    .list-group {
+        --bs-list-group-bg: var(--surface);
+        --bs-list-group-color: var(--ink);
+        --bs-list-group-border-color: var(--line);
+        --bs-list-group-action-hover-bg: var(--soft);
+        --bs-list-group-action-hover-color: var(--ink);
+        --bs-list-group-active-bg: var(--accent);
+        --bs-list-group-active-border-color: var(--accent);
+        --bs-list-group-active-color: var(--accent-ink);
+    }
+
+    .modal {
+        --bs-modal-bg: var(--surface);
+        --bs-modal-color: var(--ink);
+        --bs-modal-border-color: var(--line);
+    }
+
+    .progress {
+        --bs-progress-bg: var(--soft);
+        --bs-progress-bar-bg: var(--accent);
+        --bs-progress-bar-color: var(--accent-ink);
+    }
+
+    progress,
+    .form-check-input {
+        accent-color: var(--accent);
+    }
+
+    .form-check-input:checked {
+        background-color: var(--accent);
+        border-color: var(--accent);
+    }
+
+    .form-check-input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 0.2rem rgb(88 64 216 / 15%);
+    }
+
+    .form-control,
+    .form-select {
+        background-color: var(--surface);
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgb(88 64 216 / 15%);
+    }
+
+    .dropdown-menu {
+        --bs-dropdown-bg: var(--surface);
+        --bs-dropdown-link-active-bg: var(--accent);
+        --bs-dropdown-border-color: var(--line);
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .page-heading {
+        padding-block: 1rem 2rem;
+    }
+
+    .page-heading h1 {
+        font-size: clamp(2rem, 4vw, 3.25rem);
+    }
+
+    .atelier-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+        min-height: 512px;
+    }
+
+    .atelier-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 3rem;
+        background: var(--accent);
+        color: #fff;
+
+        h1 {
+            max-width: 680px;
+            margin: 2rem 0 1.5rem;
+            font-size: clamp(2.75rem, 4.4vw, 4.25rem);
+            line-height: 1.05;
+            letter-spacing: -0.045em;
+            overflow-wrap: anywhere;
+        }
+
+        .atelier-kicker {
+            color: #e5dfff;
+        }
+    }
+
+    .atelier-kicker {
+        color: var(--accent);
+        font-size: 0.75rem;
+        line-height: 1.6;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .atelier-description {
+        max-width: 470px;
+        color: #ece8ff;
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+
+    .atelier-hero-actions {
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: auto;
+
+        .btn {
+            --bs-btn-bg: #e6f58c;
+            --bs-btn-border-color: #e6f58c;
+            --bs-btn-color: #201b35;
+            --bs-btn-hover-bg: #f1ffad;
+            --bs-btn-hover-border-color: #f1ffad;
+            --bs-btn-hover-color: #201b35;
+            --bs-btn-active-bg: #f1ffad;
+            --bs-btn-active-border-color: #f1ffad;
+            --bs-btn-active-color: #201b35;
+            display: inline-flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .atelier-text-link {
+            color: #fff;
+        }
+
+        a:focus-visible {
+            outline-color: #e6f58c;
+        }
+    }
+
+    .atelier-text-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        color: var(--ink);
+        font-size: 0.8125rem;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+    }
+
+    .atelier-spotlight {
+        min-width: 0;
+    }
+
+    .atelier-feature {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        background: var(--surface);
+    }
+
+    .atelier-feature-image {
+        display: block;
+        background: var(--soft);
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1.65;
+            object-fit: cover;
+        }
+    }
+
+    .atelier-feature-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: start;
+        min-width: 0;
+        padding: 2rem;
+
+        h2 {
+            font-size: 1.625rem;
+            line-height: 1.25;
+            margin-block: 1rem;
+
+            a {
+                color: var(--ink);
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--accent);
+                }
+            }
+        }
+
+        > p {
+            color: var(--muted);
+            font-size: 0.875rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        > .atelier-text-link {
+            width: 100%;
+            margin-top: auto;
+        }
+    }
+
+    .atelier-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        width: 100%;
+
+        time {
+            color: var(--muted);
+            font-size: 0.75rem;
+        }
+    }
+
+    .atelier-label {
+        color: var(--accent);
+        font-size: 0.75rem;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+    .atelier-community {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        height: 100%;
+        min-height: 384px;
+        padding: 3rem;
+        background: #e6f58c;
+
+        h2 {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            color: #4d513c;
+            line-height: 1.8;
+        }
+
+        .atelier-text-link {
+            width: 100%;
+            margin-top: auto;
+        }
+    }
+
+    .atelier-community-mark {
+        align-self: end;
+        margin-bottom: 2rem;
+        color: var(--ink);
+        font-size: 3rem;
+    }
+
+    .home-slider {
+        margin-block: 3rem;
+
+        .card,
+        .carousel-inner {
+            border-radius: 0.25rem;
+        }
+
+        .slide-caption {
+            padding: 2rem;
+        }
+    }
+
+    .atelier-journal {
+        margin-top: 4rem;
+    }
+
+    .atelier-section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: clamp(1.875rem, 3vw, 2.5rem);
+            margin: 0;
+        }
+    }
+
+    .atelier-news-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;
+
+        .news-card {
+            border: 0;
+            background: transparent;
+
+            .card-body {
+                padding-inline: 0 !important;
+            }
+        }
+
+        .news-cover {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1.6;
+            border-radius: 0.25rem;
+            object-fit: cover;
+        }
+
+        .news-card h2 {
+            font-size: 1.375rem;
+            line-height: 1.3;
+
+            a {
+                color: var(--ink);
+
+                &:hover {
+                    color: var(--accent);
+                }
+            }
+        }
+
+        .news-card p {
+            font-size: 0.875rem;
+            line-height: 1.7;
+        }
+    }
+
+    .atelier-connection {
+        margin-top: 4rem;
+        padding: 2rem;
+        background: var(--soft);
+
+        .card {
+            margin-bottom: 0;
+            background: transparent;
+            border: 0;
+        }
+
+        .card-body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 0 !important;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .input-group {
+            max-width: 480px;
+        }
+    }
+
+    .site-footer {
+        --bs-secondary-color: #b8b3cd;
+        border: 0 !important;
+        padding-block: 3rem 2rem !important;
+        background: #201b35;
+        color: #fff;
+
+        .footer-brand {
+            color: #fff;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.04em;
+        }
+
+        .footer-description {
+            max-width: 460px;
+            line-height: 1.8;
+        }
+
+        .link-secondary {
+            color: #c8c3dc !important;
+
+            &:hover {
+                color: #e6f58c !important;
+            }
+        }
+
+        a:focus-visible {
+            outline-color: #e6f58c;
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+        }
+    }
+
+    @media (max-width: 1199.98px) {
+        .atelier-intro {
+            padding: 2rem;
+        }
+
+        .navbar-collapse {
+            padding-top: 1rem;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .atelier-hero {
+            grid-template-columns: 1fr;
+        }
+
+        .atelier-intro {
+            min-height: 384px;
+        }
+
+        .atelier-intro h1 {
+            max-width: 720px;
+            font-size: clamp(3rem, 7vw, 4.25rem);
+        }
+
+        .atelier-description {
+            max-width: 600px;
+        }
+
+        .atelier-feature-with-image {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        }
+
+        .atelier-feature-image img {
+            height: 100%;
+            min-height: 256px;
+            aspect-ratio: auto;
+        }
+
+        .atelier-news-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .container {
+            padding-inline: 1rem;
+        }
+
+        .atelier-intro {
+            min-height: 0;
+            padding: 2rem 1.5rem;
+        }
+
+        .atelier-intro h1 {
+            margin-top: 1.5rem;
+            font-size: clamp(2.625rem, 10vw, 4rem);
+        }
+
+        .atelier-description {
+            font-size: 0.9375rem;
+        }
+
+        .atelier-feature-with-image {
+            display: flex;
+        }
+
+        .atelier-feature-image img {
+            height: auto;
+            min-height: 0;
+            aspect-ratio: 1.7;
+        }
+
+        .atelier-feature-body {
+            padding: 1.5rem;
+        }
+
+        .atelier-section-heading {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .atelier-news-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .atelier-connection {
+            padding: 1.5rem;
+
+            .card-body {
+                flex-direction: column;
+                align-items: start;
+                gap: 1rem;
+            }
+        }
+
+        .atelier-community {
+            min-height: 320px;
+            padding: 2rem;
+        }
+    }
+}
