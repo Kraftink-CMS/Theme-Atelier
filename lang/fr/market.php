@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'description' => 'Un thème moderne aux tons ivoire et violet, à la typographie ample et aux actualités en composition asymétrique.',
+    'description' => 'Présentez votre serveur et mettez une actualité à la une dès l’accueil.',
 ];
