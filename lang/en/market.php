@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'description' => 'A modern theme in ivory and violet, with spacious typography and an asymmetric news layout.',
+    'description' => 'Introduce your server and put a news post in the spotlight.',
 ];
